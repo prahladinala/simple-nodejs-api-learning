@@ -15,7 +15,29 @@ app.get("/api/v1/instagram", (req, res) => {
     follows: 100,
     date: Date.now(),
   };
-  res.status(200).json({ instaSocial });
+  res.status(200).json(instaSocial);
+});
+
+// FACEBOOK
+app.get("/api/v1/facebook", (req, res) => {
+  const faceSocial = {
+    username: "prahladinala",
+    followers: 66,
+    follows: 10,
+    date: Date.now(),
+  };
+  res.status(200).json(faceSocial);
+});
+
+// LINKEDIN
+app.get("/api/v1/linkedin", (req, res) => {
+  const linkSocial = {
+    username: "prahladinala",
+    followers: 800,
+    follows: 80,
+    date: Date.now(),
+  };
+  res.status(200).json(linkSocial);
 });
 
 app.listen(port, () => {
